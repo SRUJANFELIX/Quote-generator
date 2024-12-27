@@ -4,6 +4,7 @@ const CATEGORIES = [
     'science', 'technology', 'travel', 'war', 'peace', 'famous-quotes',
     'movies', 'sports', 'music'
 ];
+
 document.addEventListener('DOMContentLoaded', () => {
     const categorySelect = document.getElementById('categorySelect');
     const generateButton = document.getElementById('generateButton');
@@ -33,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function fetchAdvice() {
-        const url = https://api.adviceslip.com/advice;
+        const url = "https://api.adviceslip.com/advice";
         fetch(url)
             .then(response => response.json())
             .then(data => {
@@ -75,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     copyIcon.addEventListener('click', () => {
         const quote = quoteText.textContent;
         const author = quoteAuthor.textContent;
-        const quoteToCopy = ${quote} ${author};
+        const quoteToCopy = `${quote} ${author}`;
         
         navigator.clipboard.writeText(quoteToCopy)
             .then(() => {
