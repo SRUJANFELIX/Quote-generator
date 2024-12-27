@@ -4,7 +4,6 @@ const CATEGORIES = [
     'science', 'technology', 'travel', 'war', 'peace', 'famous-quotes',
     'movies', 'sports', 'music'
 ];
-
 document.addEventListener('DOMContentLoaded', () => {
     const categorySelect = document.getElementById('categorySelect');
     const generateButton = document.getElementById('generateButton');
