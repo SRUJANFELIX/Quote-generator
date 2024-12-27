@@ -1,0 +1,194 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    overflow: hidden;
+}
+
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: -200px; /* Initially hidden */
+    background-color: #111;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: white;
+    display: block;
+    text-align: center;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 15px;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+select, button {
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    outline: none;
+}
+
+select {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    width: calc(100% - 22px);
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    background: #9b59b6;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn:hover {
+    background: #8e44ad;
+}
+
+#quoteDisplay {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+blockquote {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+#quoteAuthor {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+}
+
+.copy-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.copy-icon:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-container {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
+
+.page-container h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.page-container p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin-left: 0;
+        max-width: 90%;
+    }
+
+    .sidebar {
+        width: 100%;
+        left: -100%; /* Initially hidden */
+    }
+
+    .menu-icon {
+        left: 20px;
+    }
+}
