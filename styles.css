@@ -13,10 +13,10 @@ body {
 
 .sidebar {
     height: 100%;
-    width: 200px;
+    width: 50%; /* Sidebar covers half the screen */
     position: fixed;
     top: 0;
-    left: -200px; /* Initially hidden */
+    left: -50%; /* Initially hidden */
     background-color: #111;
     padding-top: 20px;
     display: flex;
@@ -156,39 +156,5 @@ blockquote {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-.page-container {
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    margin: 20px;
-}
-
-.page-container h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.page-container p {
-    font-size: 1.2em;
-    line-height: 1.5;
-}
-
-@media screen and (max-width: 768px) {
-    .container {
-        margin-left: 0;
-        max-width: 90%;
-    }
-
-    .sidebar {
-        width: 100%;
-        left: -100%; /* Initially hidden */
-    }
-
-    .menu-icon {
-        left: 20px;
     }
 }
