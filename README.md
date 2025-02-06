@@ -5,6 +5,7 @@ A simple and interactive Quote Generator that provides random inspirational quot
 🌟 Live Demo
 
 🔗 Click here to view the Quote Generator
+https://github.com/SrujanFelix/Quote-generator.git
 
 📌 Features
 
